@@ -1,5 +1,8 @@
-﻿namespace CarShowroomMobile.Entitys
+﻿using System;
+
+namespace CarShowroomMobile.Entitys
 {
+    [Serializable]
     public class Gearbox
     {
         public int IdGearbox { get; set; }

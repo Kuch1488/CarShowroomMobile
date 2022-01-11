@@ -2,6 +2,7 @@
 
 namespace CarShowroomMobile.Entitys
 {
+    [Serializable]
     public class Generation
     {
         public int IdGeneration { get; set; }

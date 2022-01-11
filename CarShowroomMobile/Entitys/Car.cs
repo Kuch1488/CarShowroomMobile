@@ -1,5 +1,8 @@
-﻿namespace CarShowroomMobile.Entitys
+﻿using System;
+
+namespace CarShowroomMobile.Entitys
 {
+    [Serializable]
     public class Car
     {
         public string VinNumber { get; set; }

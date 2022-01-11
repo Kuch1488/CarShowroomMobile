@@ -5,7 +5,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+" Clicked="OnAddItemClicked"/>
     </ContentPage.ToolbarItems>
-    <ListView x:Name="CarList" ItemSelected="OnItemSelected">
+    <ListView x:Name="CarList" Margin="20" ItemSelected="OnItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
