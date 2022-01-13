@@ -12,7 +12,9 @@ namespace CarShowroomMobile.Entitys
             Cars = new HashSet<Car>();
         }
 
+        [JsonProperty("idModel")]
         public int IdModel { get; set; }
+        [JsonProperty("name")]
         public string Name { get; set; }
         [JsonIgnore]
         public int IdBody { get; set; }

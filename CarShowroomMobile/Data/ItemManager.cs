@@ -16,5 +16,10 @@ namespace CarShowroomMobile.Data
         {
             return await _restService.GetCars();
         }
+
+        public Task DeleteTaskAsync(Car car)
+        {
+            return _restService.DeleteCarAsync(car.VinNumber);
+        }
     }
 }

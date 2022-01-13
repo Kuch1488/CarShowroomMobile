@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarShowroomMobile.Entitys;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,18 @@ namespace CarShowroomMobile.Pages
         public CarPage()
         {
             InitializeComponent();
+        }
+
+        async void OnDeleteButtonClicked(object sender, EventArgs e)
+        {
+            Car car = (Car)BindingContext;
+            await App.CarManager.DeleteTaskAsync(car);
+            await Navigation.PopAsync();
+        }
+
+        private async void OnCancelButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

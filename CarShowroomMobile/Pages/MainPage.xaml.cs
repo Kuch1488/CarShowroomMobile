@@ -1,4 +1,5 @@
-﻿using CarShowroomMobile.Pages;
+﻿using CarShowroomMobile.Entitys;
+using CarShowroomMobile.Pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,15 +28,15 @@ namespace CarShowroomMobile
         {
             await Navigation.PushAsync(new CarPage
             {
-
+                BindingContext = new Car()
             });
         }
 
-        private async void OnItemSelected(object sender, EventArgs e)
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             await Navigation.PushAsync(new CarPage
             {
-
+                BindingContext = e.SelectedItem as Car
             });
         }
     }

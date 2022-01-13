@@ -7,5 +7,6 @@ namespace CarShowroomMobile.Data
     public interface IRestService
     {
         Task<List<Car>> GetCars();
+        Task DeleteCarAsync(string vinNumber);
     }
 }

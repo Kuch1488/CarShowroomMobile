@@ -12,7 +12,9 @@ namespace CarShowroomMobile.Entitys
             StateElements = new HashSet<StateElement>();
         }
 
+        [JsonProperty("idState")]
         public int IdState { get; set; }
+        [JsonProperty("name")]
         public string Name { get; set; }
 
         [JsonIgnore]

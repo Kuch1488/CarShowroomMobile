@@ -12,8 +12,11 @@ namespace CarShowroomMobile.Entitys
             Models = new HashSet<Model>();
         }
 
+        [JsonProperty("idGeneration")]
         public int IdGeneration { get; set; }
+        [JsonProperty("year")]
         public Int16 Year { get; set; }
+        [JsonProperty("produced")]
         public int Produced { get; set; }
 
         [JsonIgnore]

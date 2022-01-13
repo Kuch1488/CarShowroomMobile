@@ -4,6 +4,8 @@
              x:Class="CarShowroomMobile.Pages.CarPage">
     <ContentPage.Content>
         <StackLayout>
+            <Button Text="Delete" Clicked="OnDeleteButtonClicked"/>
+            <Button Text="Cancel" Clicked="OnCancelButtonClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

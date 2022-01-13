@@ -12,8 +12,11 @@ namespace CarShowroomMobile.Entitys
             Models = new HashSet<Model>();
         }
 
+        [JsonProperty("idGearbox")]
         public int IdGearbox { get; set; }
+        [JsonProperty("type")]
         public string Type { get; set; }
+        [JsonProperty("number")]
         public int Number { get; set; }
 
         [JsonIgnore]

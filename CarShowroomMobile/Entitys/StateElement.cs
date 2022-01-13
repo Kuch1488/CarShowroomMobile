@@ -6,7 +6,9 @@ namespace CarShowroomMobile.Entitys
     [Serializable]
     public class StateElement
     {
+        [JsonProperty("idStateElement")]
         public int IdStateElement { get; set; }
+        [JsonProperty("name")]
         public string Name { get; set; }
         [JsonIgnore]
         public string VinNumber { get; set; }

@@ -12,8 +12,11 @@ namespace CarShowroomMobile.Entitys
             StateElements = new HashSet<StateElement>();
         }
 
+        [JsonProperty("vinNumber")]
         public string VinNumber { get; set; }
+        [JsonProperty("colour")]
         public string Colour { get; set; }
+        [JsonProperty("price")]
         public decimal Price { get; set; }
         [JsonIgnore]
         public int IdShowroom { get; set; }

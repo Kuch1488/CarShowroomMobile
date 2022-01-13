@@ -4,6 +4,6 @@ namespace CarShowroomMobile
 {
     public class Constants
     {
-        public static string RestUrl = DeviceInfo.Platform == DevicePlatform.Android ? "http://carshowroom.somee.com" : "http://carshowroom.somee.com";
+        public static string RestUrl = "http://carshowroom.somee.com";
     }
 }

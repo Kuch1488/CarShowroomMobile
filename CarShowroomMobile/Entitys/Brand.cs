@@ -12,7 +12,9 @@ namespace CarShowroomMobile.Entitys
             Models = new HashSet<Model>();
         }
 
+        [JsonProperty("idBrand")]
         public int IdBrand { get; set; }
+        [JsonProperty("name")]
         public string Name { get; set; }
 
         [JsonIgnore]
