@@ -8,5 +8,7 @@ namespace CarShowroomMobile.Data
     {
         Task<List<Car>> GetCars();
         Task DeleteCarAsync(string vinNumber);
+
+        Task SaveCarAsync(Car car, bool isNewItem);
     }
 }

@@ -26,7 +26,7 @@ namespace CarShowroomMobile
 
         private async void OnAddItemClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CarPage
+            await Navigation.PushAsync(new CarPage(true)
             {
                 BindingContext = new Car()
             });

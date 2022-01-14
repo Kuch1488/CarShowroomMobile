@@ -1,11 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarShowroomMobile.Pages.CarPage">
+             x:Class="CarShowroomMobile.Pages.CarPage"
+             Title="CarShowroom">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Delete" Clicked="OnDeleteButtonClicked"/>
-            <Button Text="Cancel" Clicked="OnCancelButtonClicked"/>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Общая информация:" TextColor="Black" FontSize="Title" FontAttributes="Bold" Margin="20,0,0,0"/>
+                <Label Text="Марка" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_BrandName" Text="{Binding IdModelNavigation.IdBrandNavigation.Name}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Модель" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_ModelName" Text="{Binding IdModelNavigation.Name}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Цена" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_Price" Text="{Binding Price}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Класс" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_ClassName" Text="{Binding IdModelNavigation.IdClassNavigation.Name}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Цвет" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_Colour" Text="{Binding Colour}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Vin-number" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="Vin_Number" Text="{Binding VinNumber}" Margin="30,0,50,0" FontSize="Body"/>
+                
+                <Label Text="Двигатель:" TextColor="Black" FontSize="Title" FontAttributes="Bold" Margin="20,20,0,0"/>
+                <Label Text="Тип" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_engineType" Text="{Binding IdModelNavigation.IdEngineNavigation.Type}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Мощность" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_Power" Text="{Binding IdModelNavigation.IdEngineNavigation.HP}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Объем" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_EngineVolume" Text="{Binding IdModelNavigation.IdEngineNavigation.Volume}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Расход" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_Consumption" Text="{Binding IdModelNavigation.IdEngineNavigation.Consumption}" Margin="30,0,50,0" FontSize="Body"/>
+
+                <Label Text="Трансмиссия:" TextColor="Black" FontSize="Title" FontAttributes="Bold" Margin="20,20,0,0"/>
+                <Label Text="Тип" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_GearboxType" Text="{Binding IdModelNavigation.IdGearboxNavigation.Type}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Количество передач" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_GearboxNumber" Text="{Binding IdModelNavigation.IdGearboxNavigation.Number}" Margin="30,0,50,0" FontSize="Body"/>
+
+                <Label Text="Кузов:" TextColor="Black" FontSize="Title" FontAttributes="Bold" Margin="20,20,0,0"/>
+                <Label Text="Название" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_BodyName" Text="{Binding IdModelNavigation.IdBodyNavigation.Name}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Количество дверей" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_Door" Text="{Binding IdModelNavigation.IdBodyNavigation.Door}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Объем" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_BodyVolume" Text="{Binding IdModelNavigation.IdBodyNavigation.Volume}" Margin="30,0,50,0" FontSize="Body"/>
+
+                <Label Text="Поколение:" TextColor="Black" FontSize="Title" FontAttributes="Bold" Margin="20,20,0,0"/>
+                <Label Text="Год" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_Year" Text="{Binding IdModelNavigation.IdGenerationNavigation.Year}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Выпуск" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <CheckBox x:Name="_Produced" IsChecked="{Binding IdModelNavigation.IdGenerationNavigation.Produced}" Margin="30,0,0,0"/>
+
+                <Label Text="Автосалон:" TextColor="Black" FontSize="Title" FontAttributes="Bold" Margin="20,20,0,0"/>
+                <Label Text="Название" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_ShowroomName" Text="{Binding IdShowroomNavigation.Name}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Адрес" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_Address" Text="{Binding IdShowroomNavigation.Address}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Телефон" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_Phone" Text="{Binding IdShowroomNavigation.Phone}" Margin="30,0,50,0" FontSize="Body"/>
+                <Label Text="Почта" TextColor="Black" FontSize="Body" Margin="30,0,0,0"/>
+                <Entry x:Name="_Email" Text="{Binding IdShowroomNavigation.Email}" Margin="30,0,50,0" FontSize="Body"/>
+
+                <Button Text="Save" Clicked="OnSaveButtonClicked" Margin="0,30,0,0"/>
+                <Button Text="Delete" Clicked="OnDeleteButtonClicked"/>
+                <Button Text="Cancel" Clicked="OnCancelButtonClicked"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

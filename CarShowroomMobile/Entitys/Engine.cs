@@ -17,7 +17,7 @@ namespace CarShowroomMobile.Entitys
         [JsonProperty("type")]
         public string Type { get; set; }
         [JsonProperty("volume")]
-        public int Volume { get; set; }
+        public double Volume { get; set; }
         [JsonProperty("hp")]
         public int HP { get; set; }
         [JsonProperty("consumption")]
